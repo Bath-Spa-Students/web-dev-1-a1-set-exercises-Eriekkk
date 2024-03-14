@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
 
+
 *{
     margin: 0;;
     padding: 0;
@@ -9,6 +10,8 @@
 body{
     min-height: 100vh;
     background: linear-gradient(#9B4444,#C68484);
+    justify-content: center;
+    align-items: center;
 }
 header{
     position: absolute;
@@ -49,7 +52,7 @@ header ul li a:hover{
     color: #9B4444;
 }
 
-section{
+#sec{
     position: relative;
     width: 100%;
     height: 100vh;
@@ -194,4 +197,173 @@ section::before{
     margin-bottom: 10px;
     color: white;
     text-align: center;
+}
+
+.cast{
+    min-height: 100vh;
+    background:  #832D38;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cast .table{
+    width: 82vw;
+    height: 90vh;
+    background-color: #fff5;
+
+    backdrop-filter: blur(7px);
+    box-shadow: 0 .4rem .8rem #0005;
+    border-radius: .8rem;
+
+    overflow: hidden;
+
+}
+
+table, th, td{
+    border-collapse: collapse;
+    padding: 1rem;
+    text-align: left;
+}
+
+.table_header{
+    width: 100%;
+    height: 10%;
+    background-color: B31312;
+    padding: .8rem 1rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.table_body{
+    width: 95%;
+    max-height: calc(89% - 1.6rem);
+    background-color: #F8DFBF;
+    margin: .8rem auto;
+    border-radius: .6rem;
+    overflow: auto;
+    overflow: overlay;
+}
+
+.table_body::-webkit-scrollbar{
+    width: 0.5rem;
+    height: 9.5rem;
+}
+
+.table_body::-webkit-scrollbar-thumb{
+    border-radius: .5rem;
+    background-color: #0004;
+    visibility: hidden;
+}
+
+.table_body:hover::-webkit-scrollbar-thumb{
+    visibility: visible;
+}
+
+table{
+    width: 100%; 
+}
+
+thead th{
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #CAA674;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+tbody tr:nth-child(even){
+    background-color: #0000000b;
+}
+
+tbody tr:hover{
+    background-color: #fff6;
+
+}
+
+.role{
+    padding: .4rem 0;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+.role.main{
+    background-color:#A3C9AA;
+
+}
+
+.role.sup{
+    background-color: #7673bc;
+}
+
+@media (max-width: 1000px){
+    td:not(:first-of-type){
+        min-width: 12.1rem;
+    }
+}
+ 
+.reviews{
+    padding: 40px 0;
+    background: #832D38;
+    color: white;
+    text-align: center;
+}
+
+#rev_text{
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: white;
+    text-align: center;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.col{
+    position: relative;
+    flex: 33.33%;
+    max-width: 33.33%;
+    box-sizing: border-box;
+    padding: 15px;
+
+}
+
+.revi{
+    border-radius: 15px;
+    background:  #C68484;
+    padding: 30px;
+}
+
+.name{
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+.stars .fa{
+    color: #2B2A4C;
+}
+
+@media screen  and (max-width: 960px){
+    .col{
+        flex: 100%;
+        max-width: 100%;
+
+    }
+
+}
+    
+
+footer{
+    text-align: center;
+}
+footer a{
+    text-decoration: none;
+    color: white;
 }
